@@ -35,9 +35,9 @@ def check_guess(guess, secret):
 
     try:
         if guess > secret:
-            return "Too High", "📈 Go HIGHER!"
+            return "Too High", "📈 Go HIGHER!" # FIXME: Logic breaks here
         else:
-            return "Too Low", "📉 Go LOWER!"
+            return "Too Low", "📉 Go LOWER!" #FIXME: and here ^^
     except TypeError:
         g = str(guess)
         if g == secret:
@@ -156,7 +156,7 @@ if submit:
         st.session_state.history.append(guess_int)
 
         if st.session_state.attempts % 2 == 0:
-            secret = str(st.session_state.secret)
+            secret = str(st.session_state.secret) # FIXME: Logic breaks here
         else:
             secret = st.session_state.secret
 
