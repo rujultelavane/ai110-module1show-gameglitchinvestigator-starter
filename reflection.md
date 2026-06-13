@@ -8,15 +8,20 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+When you first run it, the game appears to be fine: the UI looks great and the game feels self-explanatory, all instructions are provided.
+However, when I ran it, the hints were broken. For example, if I typed in 100, it said go higher even though that's the highest it goes. And if I type in 1, it says go lower even though thats as low as you can go. It should have pointed me in the right direction and said lower/higher, respectively.
+Another bug I found was that the hints were backwards. On one run of the game, I was guessing 25 and it said go lower. Once I "lost" and ran out of hints, the real answer was 45. The hint should've said go higher.
+Real quick, another thing I found was when switching between game difficulty modes, when I switch from Medium to Easy, I see both in the blue box and on the side panel for Medium the range is 1-100 and I have 8 guesses. But for Easy mode, in the blue box I see the range is from 1-100 with 6 guesses, but the side panel says 1-20 with 6 guesses.
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
 | Input | Expected Behavior | Actual Behavior | Console Output / Error |
 |-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| 100   |   correct guess   |   "go higher"   |         none           |
+|  1    |     "go higher"   |   "go lower"    |         none           |
+|  25   |    "go higher"    |    "go lower"   |         none           |
 
 ---
 
