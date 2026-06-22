@@ -1,7 +1,7 @@
 import random
 import streamlit as st
 
-from logic_utils import check_guess
+from logic_utils import check_guess #FIX: Updated import using agent mode
 
 
 def get_range_for_difficulty(difficulty: str):
@@ -140,7 +140,7 @@ if submit:
     else:
         st.session_state.history.append(guess_int)
 
-        outcome, message = check_guess(guess_int, st.session_state.secret)
+        outcome, message = check_guess(guess_int, st.session_state.secret) #FIX: Always pass secret as an int using agent mode
 
         if show_hint:
             st.warning(message)
